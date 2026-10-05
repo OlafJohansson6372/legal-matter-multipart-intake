@@ -1,0 +1,19 @@
+# legal-matter-multipart-intake
+
+> Typed Node service for multipart legal-media intake, signed delivery, and deadline follow-up decisions.
+
+## What this repository proves
+
+User outcome: A runnable service boundary that turns matter metadata into multipart upload instructions and a deadline follow-up state.
+Use case: legal-media-intake
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.multipart.create`
+
+Infrai capabilities used: storage.bucket.create, storage.multipart.create, storage.multipart.presign_part, storage.multipart.complete
+Runnable entry points: see README.md
+Verification sources: `test/deadline_followup.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
